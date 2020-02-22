@@ -317,7 +317,6 @@ https://www.tooplate.com/view/2116-blugoon
             </div>
             <script type="text/javascript">
     		      function send(e){
-        		    e.preventDefault();
         		    var form = e.target;
         		    var email = form["email"].value;
         		    var name = form["name"].value;
@@ -330,7 +329,6 @@ https://www.tooplate.com/view/2116-blugoon
     		      }
               
               function myPageFunction(name){
-                name.preventDefault();
                 var name = name.target;
                 var name1 = name["name"].value;
                 analytics.page('Button Clicked', {name: name1});
