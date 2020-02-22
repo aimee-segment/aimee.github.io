@@ -37,15 +37,14 @@ https://www.tooplate.com/view/2116-blugoon
               <a href="#"><img src="assets/images/logo-image.jpg" alt="Blugoon by Tooplate" /></a>
             </div>
             <div class="author-content">
-              <h4>Blugoon</h4>
-              <span>Free Bootstrap Theme</span>
+              <h4>Blue Goon</h4>
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
                 <li><a href="#section1">Intro</a></li>
                 <li><a href="#section2">Features</a></li>
                 <li><a href="#section3">Gallery</a></li>
-                <li><a href="#section4">Contact</a></li>
+                <li><a href="#section4">Contact Form</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -68,8 +67,7 @@ https://www.tooplate.com/view/2116-blugoon
               </ul>
             </div>
             <div class="copyright-text">
-              <p>Copyright 2020 Blugoon<br>
-              Design: Tooplate</p>
+              <p>Copyright 2020 Blue goon</p>
             </div>
           </div>
         </div>
@@ -78,24 +76,20 @@ https://www.tooplate.com/view/2116-blugoon
       <section class="section about-me" data-section="section1">
         <div class="container">
         <div class="top-header">
-        	<img src="assets/images/aerobic-girls.jpg" alt="aerobic girls" />
         </div>
           <div class="section-heading">
           
-            <h2>Introducing Blugoon</h2>
+            <h2>Introducing Blue Goon</h2>
             <div class="line-dec"></div>
-            <span>Please tell your friends about this awesome template. Thank you.</span>
           </div>
           <div class="right-image-post">
             <div class="row">
  
               <div class="col-md-8">
                 <div class="left-text">
-                  <h4>Modern Web Design</h4>
-                  <p>You are allowed to use this template for commercial or personal websites. You are NOT allowed to redistribute this on template collection website. You can feature this template on your blog post.</p>
-                  <p>All photos in this template are from <a rel="nofollow" href="https://www.pexels.com">Pexels</a> website. Blugoon HTML Template is provided by Tooplate. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                  <p>This site is has Segment tracking on it and is used for testing purposes.</p>
                   <div class="white-button">
-                    <a href="#">Read More</a>
+                    <a href="#">Track</a>
                   </div>
                 </div>
               </div>
@@ -118,11 +112,11 @@ https://www.tooplate.com/view/2116-blugoon
               
               <div class="col-md-8">
                 <div class="right-text">
-                  <h4>Best Template for you!</h4>
+                  <h4>Explore the world!</h4>
                   <p>Quisque feugiat nisl at lacus condimentum, eu suscipit odio fringilla. Mauris eu est vitae erat condimentum pellentesque. Fusce vehicula nunc at augue sagittis tristique.</p>
                   <p>Ut imperdiet massa at enim tempus volutpat. Nullam gravida augue quis facilisis commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                   <div class="white-button">
-                    <a href="#">Read More</a>
+                    <a href="#">Home</a>
                   </div>
                 </div>
               </div>
@@ -143,14 +137,14 @@ https://www.tooplate.com/view/2116-blugoon
             <div class="col-md-6">
               <div class="service-item">
                 <i class="fa fa-area-chart"></i>
-                <h4>Top Performance</h4>
+                <h4>Analytics</h4>
                 <p>Donec sit amet tempor quam. Maecenas nec aliquam leo, sed tincidunt urna.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="service-item">
                 <i class="fa fa-check-square-o"></i>
-                <h4>Trusted Service</h4>
+                <h4>To-Do</h4>
                 <p>Etiam at porta nulla, et euismod enim. Nullam semper ipsum et dui scelerisque.</p>
               </div>
             </div>
@@ -184,11 +178,11 @@ https://www.tooplate.com/view/2116-blugoon
               <form class="isotope-toolbar">
                 <label><input type="radio" data-type="*" checked="" name="isotope-filter" />
                   <span>all</span></label>
-                <label><input type="radio" data-type="pretty" name="isotope-filter" />
+                <label><input type="radio" data-type="pose" name="isotope-filter" />
                   <span>pretty</span></label>
-                <label><input type="radio" data-type="sexy" name="isotope-filter" />
-                  <span>sexy</span></label>
                 <label><input type="radio" data-type="beach" name="isotope-filter" />
+                  <span>sexy</span></label>
+                <label><input type="radio" data-type="sunshine" name="isotope-filter" />
                   <span>beach</span></label
                 >
               </form>
@@ -286,7 +280,7 @@ https://www.tooplate.com/view/2116-blugoon
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="" method="post">
+                <form id="contact" name="contact" onsubmit="send(event) action="" method="post">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
@@ -323,6 +317,24 @@ https://www.tooplate.com/view/2116-blugoon
                 </form>
               </div>
             </div>
+              <script type="text/javascript">
+    		        function send(e){
+        		      e.preventDefault();
+        		      var form = e.target;
+        		      var email = form["email"].value;
+        		      var name = form["name"].value;
+        		      var subject = form["subject"].value;
+                  var message = form["message"].value;
+        		      var user = {
+            			  email: email,
+            			  name: name
+        		      };
+
+        		      analytics.identify({email: email, name: name});
+
+        		      analytics.track('Form Submitted',{subject: subject, message: message});
+    		        }
+            </script> 
           </div>
         </div>
       </section>
