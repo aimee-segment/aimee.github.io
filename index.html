@@ -308,32 +308,26 @@ https://www.tooplate.com/view/2116-blugoon
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
+                        <input name="submit" class="button" type="submit" id="form-submit" value="Send Message"/>
                       </fieldset>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-              <script type="text/javascript">
-    		        function send(e){
-        		      e.preventDefault();
-        		      var form = e.target;
-        		      var email = form["email"].value;
-        		      var name = form["name"].value;
-        		      var subject = form["subject"].value;
-                  var message = form["message"].value;
-        		      var user = {
-            			  email: email,
-            			  name: name
-        		      };
+            <script type="text/javascript">
+    		      function send(e){
+        		    e.preventDefault();
+        		    var form = e.target;
+        		    var email = form["email"].value;
+        		    var name = form["name"].value;
+        		    var subject = form["subject"].value;
+                var message = form["message"].value;
 
-        		      analytics.identify({email: email, name: name});
+        		    analytics.identify({email: email, name: name});
 
-        		      analytics.track('Form Submitted',{subject: subject, message: message});
-    		        }
+        		    analytics.track('Form Submitted',{subject: subject, message: message});
+    		      }
             </script> 
           </div>
         </div>
