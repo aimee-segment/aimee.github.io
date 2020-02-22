@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Blugoon HTML Bootstrap 4 Template</title>
+    <title>Home/title>
     <meta name="description" content="" />
     <meta name="author" content="Tooplate" />
     <!-- Bootstrap core CSS -->
@@ -41,10 +41,10 @@ https://www.tooplate.com/view/2116-blugoon
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-                <li><a href="#section1">Intro</a></li>
-                <li><a href="#section2">Features</a></li>
-                <li><a href="#section3">Gallery</a></li>
-                <li><a href="#section4">Contact Form</a></li>
+                <li><a href="#section1" name="Intro" onclick="myPageFunction(name)>Intro</a></li>
+                <li><a href="#section2" name="Features" onclick="myPageFunction(name)>Features</a></li>
+                <li><a href="#section3" name="Gallery" onclick="myPageFunction(name)>Gallery</a></li>
+                <li><a href="#section4" name="Contact Form" onclick="myPageFunction(name)>Contact Form</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -89,7 +89,7 @@ https://www.tooplate.com/view/2116-blugoon
                 <div class="left-text">
                   <p>This site is has Segment tracking on it and is used for testing purposes.</p>
                   <div class="white-button">
-                    <a href="#">Track</a>
+                    <a href="#">Track onclick="myTrackFunction()</a>
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ https://www.tooplate.com/view/2116-blugoon
                   <p>Quisque feugiat nisl at lacus condimentum, eu suscipit odio fringilla. Mauris eu est vitae erat condimentum pellentesque. Fusce vehicula nunc at augue sagittis tristique.</p>
                   <p>Ut imperdiet massa at enim tempus volutpat. Nullam gravida augue quis facilisis commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                   <div class="white-button">
-                    <a href="#">Home</a>
+                    <a href="#" onclick="myPageFunction()>Home</a>
                   </div>
                 </div>
               </div>
@@ -328,6 +328,18 @@ https://www.tooplate.com/view/2116-blugoon
 
         		    analytics.track('Form Submitted',{subject: subject, message: message});
     		      }
+              
+              function myPageFunction(name){
+                name.preventDefault();
+                var name = name.target;
+                var name1 = name["name"].value;
+                analytics.page('Button Clicked', {name: name1});
+              }
+              
+              function myTrackFunction(){
+                analytics.track('Button Clicked');
+              }
+              
             </script> 
           </div>
         </div>
