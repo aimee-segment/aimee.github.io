@@ -337,8 +337,10 @@ https://www.tooplate.com/view/2116-blugoon
               
               function myTrackFunction(){
                 analytics.track('Button Clicked');
+                
                 var anonId = analytics.user().anonymousId();
-                window.open("https://aimee-segment.github.io?ajs_aid=anonId");
+                var url = "https://aimee-segment.github.io?ajs_aid="+anonId;
+                window.open(url);
               }
               
             </script> 
