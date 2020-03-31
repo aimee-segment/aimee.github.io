@@ -327,8 +327,6 @@ https://www.tooplate.com/view/2116-blugoon
 
         		    analytics.track('Form Submitted',{subject: subject, message: message});
                 
-                var anonId = analytics.user().anonymousId();
-                window.location.href = "https://aimee-segment.github.io?ajs_aid=anonId";
     		      }
               
               function myPageFunction(name){
@@ -339,6 +337,8 @@ https://www.tooplate.com/view/2116-blugoon
               
               function myTrackFunction(){
                 analytics.track('Button Clicked');
+                var anonId = analytics.user().anonymousId();
+                window.open("https://aimee-segment.github.io?ajs_aid=anonId");
               }
               
             </script> 
